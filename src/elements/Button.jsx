@@ -1,0 +1,17 @@
+import React from 'react';
+
+/**
+ *
+ * @param children
+ * @param props
+ * @returns {*}
+ * @constructor
+ */
+
+const Button = ({children,...props}) => {
+    return (
+        <button {...props}>{children}</button>
+    );
+};
+
+export default Button;
