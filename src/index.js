@@ -8,6 +8,7 @@ import {
 import "./index.css";
 import Home from "./components/Home";
 import Weather from "./components/Weather";
+import NoPage from "./components/NoPage";
 const router = createBrowserRouter([
     {
         path: "/",
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
         path: "weather/:city",
         element: <Weather />,
     },
+    {
+        path: "*",
+        element: <NoPage />
+    }
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
