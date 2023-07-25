@@ -31,7 +31,8 @@ const Weather = () => {
         let check = '';
       const result = data.map((item,index) => {
           const date = item.dt_txt.split(" ")[0];
-          if(check !== date){
+          const time = item.dt_txt.split(" ")[1];
+          if(check !== date && (time === '15:00:00')){
               check = date;
               return  <WeatherDay data={item} key={index+1}/>
           }
